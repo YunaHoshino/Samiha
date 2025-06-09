@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samiha Rahman - Bio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="profile-section">
+            <div class="profile-picture">
+                <img id="discord-avatar" src="https://cdn.discordapp.com/avatars/1364272910214107206/a0552758caa27482e70e2f890a5853d4.webp?size=256" alt="Samiha Rahman's Profile Picture">
+            </div>
+            <h1>Samiha Rahman</h1>
+        </div>
+
+        <div class="content-section">
+            <div class="about-me">
+                <h2>About Me</h2>
+                <p>Just your average gamer from Bangladesh who spends way too much time playing games! When I'm not being lazy, you'll find me in Valorant trying to hit those headshots, building random stuff in Minecraft, or getting rekt in CS:GO. I'm all about having fun and not taking things too seriously. Sometimes I might try to code something, but let's be real - I'm mostly here for the games and memes! 🎮✨</p>
+            </div>
+
+            <div class="interests">
+                <h2>Interests</h2>
+                <ul>
+                    <li>Valorant</li>
+                    <li>Minecraft</li>
+                    <li>CS:GO</li>
+                    <li>Genshin Impact</li>
+                    <li>Wuthering Waves</li>
+                </ul>
+            </div>
+
+            <div class="social-links">
+                <h2>Connect With Me</h2>
+                <div class="social-icons">
+                    <a href="#" onclick="copyDiscordId(event)" class="social-icon discord" data-tooltip="Samiha Rahman 💝"><i class="fab fa-discord"></i></a>
+                    <a href="https://github.com/yunahoshino" target="_blank" class="social-icon github"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyDiscordId(event) {
+            event.preventDefault();
+            const discordId = '_.samihaa._';
+            navigator.clipboard.writeText(discordId).then(() => {
+                const tooltip = document.createElement('div');
+                tooltip.className = 'copy-tooltip';
+                tooltip.textContent = 'Discord ID Copied!';
+                document.body.appendChild(tooltip);
+                
+                setTimeout(() => {
+                    tooltip.remove();
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
