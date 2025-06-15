@@ -175,6 +175,9 @@ h2:hover::after {
     animation: fadeIn 1.2s 1.2s both;
     position: relative;
     overflow: hidden;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
 }
 
 .interests li::before {
@@ -195,8 +198,12 @@ h2:hover::after {
     box-shadow: 0 6px 20px rgba(230, 195, 165, 0.4);
 }
 
-.interests li:hover::before {
-    left: 100%;
+.interests li:focus {
+    outline: none;
+}
+
+.interests li:active {
+    transform: rotate(1deg) scale(0.98);
 }
 
 .social-links {
@@ -417,4 +424,4 @@ h2:hover::after {
     .social-icons {
         gap: 1.2rem;
     }
-}
+    }
